@@ -6,7 +6,7 @@
 public class Log {
 	
 	public enum Level {
-		// TODO add the levels.
+		DEBUG, INFO, WARNING, ERROR
 		
 		// Remark: If you order the entries in this enum reasonably,
 		// you can compare them using .ordinal()
@@ -35,7 +35,10 @@ public class Log {
 	 *            The message to log.
 	 */
 	public static void log(Level level, String message) {
-		// TODO implement
+		
+		if (level.ordinal() >= CURRENT_LEVEL.ordinal()) {
+			System.out.println(message);
+		}
 	}
 	
 	/**
