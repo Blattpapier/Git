@@ -1,4 +1,4 @@
-package init;
+package ch.ksimlee.it.yoloboys;
 
 import init.log.level:
 	
