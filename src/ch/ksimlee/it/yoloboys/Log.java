@@ -1,3 +1,4 @@
+package ch.ksimlee.it.yoloboys;
 
 /**
  * This is a simple implementation for logging. It contains functionality to log
