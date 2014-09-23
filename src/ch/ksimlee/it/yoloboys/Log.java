@@ -14,7 +14,7 @@ public class Log {
 	}
 	
 	/** The level of the logger. Determines which messages are actually logged. */
-	private static Level CURRENT_LEVEL; //TODO initialize the level.
+	private static Level CURRENT_LEVEL = Level.DEBUG;
 	
 	/**
 	 * Set the level of this logger.
@@ -23,7 +23,8 @@ public class Log {
 	 *            The new level to use.
 	 */
 	public static void setLevel(Level level) {
-		// TODO update the level
+		
+			CURRENT_LEVEL = level;
 	}
 
 	/**
@@ -49,7 +50,7 @@ public class Log {
 	 * @param message	The message to log.
 	 */
 	public static void error(String message) {
-		// TODO implement
+		log(Level.ERROR, message);
 	}
 	
 	/**
@@ -60,7 +61,7 @@ public class Log {
 	 *            The message to log.
 	 */
 	public static void warning(String message) {
-		// TODO implement
+			log(Level.WARNING, message);
 	}
 	
 	/**
@@ -69,8 +70,8 @@ public class Log {
 	 *
 	 * @param message	The message to log.
 	 */
-	public static void info(String mesage) {
-		// TODO implement
+	public static void info(String message) {
+			log(Level.INFO, message);
 	}
 	
 	/**
@@ -79,8 +80,8 @@ public class Log {
 	 *
 	 * @param message	The message to log.
 	 */
-	public static void debug(String mesage) {
-		// TODO implement
+	public static void debug(String message) {
+			log(Level.DEBUG, message);
 	}
 
 	/* ----- */
