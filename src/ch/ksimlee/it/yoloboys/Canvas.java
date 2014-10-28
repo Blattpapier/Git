@@ -19,8 +19,10 @@ public class Canvas extends JPanel {
 	private long aktuelleSekunde = 0;
 	private int lastFPS = 0;
 	private static final int FPS = 20;
+private Game game;
 
-	public Canvas() {
+	public Canvas(Game game) {
+		this.game=game;
 		setPreferredSize(SIZE);
 		Log.info("Initialized canvas.");
 		/*
@@ -51,16 +53,18 @@ public class Canvas extends JPanel {
 		// The following two commands draw the background:
 		// Set the color of the "pen". This color will be used in the following
 		// drawing commands.
-		g.setColor(Color.blue);
-		g.fillRect(0, 0, SIZE.width, SIZE.height);
+
 		// Draw a rectangle with the size of the canvas. Therefore, this draws a
 		// "background".
-		g.setColor(Color.green);
-		g.fillRect(0, 200, SIZE.width, SIZE.height);
-		g.setColor(Color.black);
-		g.fillOval(500, 500, 50, 100);
-		g.setColor(Color.white);
-		g.drawRect(350, 50, 300, 100);
+			g.drawRect(0, 0, 1000, 1000);
+			g.setColor(Color.white);
+			g.fillRect(0, 0, 1000, 1000);
+			g.setColor(Color.black);
+			for(RenderObject object: this.game.getObjectsToRender())
+			{
+				object.render(g);
+			}
+		
 		long now = System.currentTimeMillis()/1000;
 		if (now > aktuelleSekunde){
 			aktuelleSekunde = now;
