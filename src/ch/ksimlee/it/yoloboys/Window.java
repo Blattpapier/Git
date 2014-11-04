@@ -16,7 +16,7 @@ public class Window extends JFrame {
 	 * This variable stores the title of the game. As it will not change at
 	 * runtime, we defined it as "final", meaning that it _cannot_ be modified.
 	 */
-	public static final String GAME_TITLE = "Stefan has lost!";
+	public static final String GAME_TITLE = "SCHISS USL€NDER!!!";
 
 	/*
 	 * This is the constructor of the class. Every object that is created with a

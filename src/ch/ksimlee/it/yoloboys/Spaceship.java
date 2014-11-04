@@ -11,14 +11,14 @@ import ch.ksimlee.it.yoloboys.InputHandler;
 public class Spaceship extends ImageObject {
 	
 	/** Path to the image on the filesystem. */
-	private static final String FILENAME = "Ueli.png";
+	private static final String FILENAME = "blocher.png";
 	
 	private static final int zIndex = 100;
 	
-	private int speed = 10;
+	private int speed = 25;
 
 	public Spaceship(int x, int y) {
-		super(500, 500, zIndex, true, FILENAME);
+		super(850, 400, zIndex, true, FILENAME);
 	}
 
 	@Override

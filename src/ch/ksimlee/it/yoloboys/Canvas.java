@@ -12,13 +12,13 @@ import javax.swing.Timer;
 @SuppressWarnings("serial")
 public class Canvas extends JPanel {
 	// This variable stores the size of the canvas (in pixel).
-	private Dimension SIZE = new Dimension(1000, 1000);
+	private Dimension SIZE = new Dimension(1920, 1080);
 	// This variable stores with how many frames per second (FPS) the canvas
 	// should be redrawn.
 	private int Counter = 0;
 	private long aktuelleSekunde = 0;
 	private int lastFPS = 0;
-	private static final int FPS = 20;
+	private static final int FPS = 40;
 private Game game;
 
 	public Canvas(Game game) {
@@ -56,9 +56,13 @@ private Game game;
 
 		// Draw a rectangle with the size of the canvas. Therefore, this draws a
 		// "background".
-			g.drawRect(0, 0, 1000, 1000);
+			g.drawRect(0, 0, 2000, 1100);
+			g.setColor(Color.red);
+			g.fillRect(0, 0, 2000, 1100);
+			g.drawRect(500, 500, 100, 200);
 			g.setColor(Color.white);
-			g.fillRect(0, 0, 1000, 1000);
+			g.fillRect(820, 80, 220, 800);
+			g.fillRect(532, 370, 800, 220);
 			g.setColor(Color.black);
 			for(RenderObject object: this.game.getObjectsToRender())
 			{
