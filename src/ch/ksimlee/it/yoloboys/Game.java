@@ -28,7 +28,7 @@ public class Game implements Runnable {
 		
 		// Add the spaceship to the list of renderable objects.
 		objectsToRender.add(spaceship);
-		
+		objectsToRender.add(new schaf(100,100));
 		Log.info("Game initialized.");
 	}
 

@@ -28,7 +28,8 @@ public class Spaceship extends ImageObject {
 		if (currentInput.isKeyPressed(KeyEvent.VK_A) ||
 				currentInput.isKeyPressed(KeyEvent.VK_LEFT)) {
 			
-			move(-speed, 0, allObjects);
+			boolean collision = move(-speed, 0, allObjects);
+		
 		}
 		
 		// Check if we need to move right.
@@ -46,6 +47,18 @@ public class Spaceship extends ImageObject {
 				currentInput.isKeyPressed(KeyEvent.VK_DOWN)) {
 			
 			move(0, speed, allObjects);
+		}
+		if (x < 0){
+			x =0;
+		}	
+		if (y < 0){
+			y=0;
+		}
+		if (y+getHeight() > 970){
+			y = 970-getHeight();
+		}
+		if (x+getWidth() >1920){
+			x = 1920-getWidth();
 		}
 	}
 
